@@ -1,0 +1,45 @@
+@startuml
+
+interface IComponent {
+    void operation();
+}
+
+class Decorator implements IComponent {
+
+    void setComponent(IComponent component);
+
+    void operation();
+}
+
+class DecoratorA extends Decorator {
+
+    void setComponent(IComponent component);
+
+        void operation();
+}
+
+class DecoratorB extends Decorator {
+
+    void setComponent(IComponent component);
+
+    void operation();
+}
+
+class ConcreteComponent implements IComponent {
+
+    void operation();
+}
+
+IComponent --* Decorator
+
+note as N1
+
+  装饰模式是为已有功能动态添加更多功能的一种方式。
+  它可以将类中装饰功能从类中搬移出去，这样可以简化原有的类。
+  有效的把类的核心职责和装饰功能区分开了，可以去除相关类的重复逻辑。
+
+end note
+
+
+
+@enduml
