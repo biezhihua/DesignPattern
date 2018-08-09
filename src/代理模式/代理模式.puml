@@ -1,0 +1,32 @@
+@startuml
+
+interface ISubject {
+    void request();
+}
+
+class RealSubject implements ISubject {
+
+    request();
+
+}
+
+class ProxySubject implements ISubject {
+
+    request();
+}
+
+ProxySubject *--> RealSubject
+
+
+note as N1
+
+  代理的使用场景：
+  1. 远程代理
+  2. 虚拟代理
+  3. 安全代理
+  4. 智能代理 - 当调用真实的对象时，代理处理一些其他的事情。
+
+end note
+
+
+@enduml

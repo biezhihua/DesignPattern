@@ -59,8 +59,8 @@ class Main {
     @Test
     fun main() {
 
-        val concreateComponent = ConcreteComponent();
-        val decoratorA = DecoratorA(concreateComponent)
+        val concreteComponent = ConcreteComponent();
+        val decoratorA = DecoratorA(concreteComponent)
         val decoratorB = DecoratorB(decoratorA)
 
         decoratorB.operation()
